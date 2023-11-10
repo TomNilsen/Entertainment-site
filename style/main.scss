@@ -1,0 +1,365 @@
+@import "./colors";
+@import "./reset";
+@import "./general";
+@import "./animation";
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      object-fit: contain;
+      width: 10%;
+      margin-right: 1rem;
+      clip-path: circle(45% at 50% 50%);
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      padding: 1rem;
+
+      &:hover {
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+      }
+      &:active {
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+      }
+    }
+  }
+
+  #mobileMainBTN {
+    display: none;
+  }
+
+  #mobileMain {
+    display: none;
+  }
+}
+
+main {
+  background-color: $customBlack;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1.5rem 1rem;
+  min-height: 100vh;
+
+  section {
+    width: 60%;
+  }
+
+  aside {
+    width: 20%;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .mobileGigLink {
+    display: none;
+  }
+
+  div {
+    width: 50%;
+    img {
+      object-fit: contain;
+      width: 100%;
+      margin: 1rem 0rem 1rem 0rem;
+    }
+    a {
+      padding: 0.5rem;
+      border-radius: 0.2rem;
+      border: solid white;
+      background-color: #0e6ffd;
+
+      &:hover {
+        background-color: #0064cf;
+      }
+
+      &:active {
+        background-color: #004da0;
+      }
+    }
+  }
+
+  article {
+    width: 40%;
+
+    p {
+      margin: 1rem 0rem 1rem 0rem;
+    }
+  }
+
+  #mobileShowList {
+    display: none;
+  }
+}
+
+.movies {
+  div {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3rem 3rem;
+    width: fit-content;
+
+    article {
+      background-color: black;
+      padding: 0rem;
+
+      width: 20rem;
+
+      iframe {
+        width: 100%;
+      }
+
+      h3 {
+        padding: 1rem 0rem 1rem 0rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.arcive {
+  blockquote {
+    margin: 3rem 0rem 3rem 0rem;
+    .quoteText {
+      font-style: italic;
+      &::before {
+        content: '"';
+      }
+      &::after {
+        content: '"';
+      }
+    }
+    .qouteAuthor {
+      font-weight: bold;
+      margin-top: 1rem;
+      text-align: end;
+
+      &::before {
+        content: "— ";
+      }
+    }
+  }
+}
+
+.lectures {
+  article {
+    margin: 2rem 0rem 2rem 0rem;
+  }
+  .imgContainer {
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      img {
+        object-fit: contain;
+        width: 25%;
+      }
+
+      ul {
+        margin: 1rem 0rem 1rem 0rem;
+        list-style: inside;
+        list-style-type: disc;
+        li {
+          margin: 0.5rem 0rem 0.5rem 0rem;
+        }
+      }
+    }
+  }
+}
+
+.book {
+  form {
+    margin-top: 4rem;
+    width: 75%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 3rem 4rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "firstName lastName"
+      "eMail eMail"
+      "type type"
+      "adress adress"
+      "date time"
+      "info info"
+      "submit submit";
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 1rem;
+      }
+
+      input {
+        height: 2rem;
+        border: none;
+        border-radius: 0.2rem;
+      }
+    }
+
+    .eMail {
+      grid-area: eMail;
+    }
+
+    .firstName {
+      grid-area: firstName;
+    }
+
+    .lastName {
+      grid-area: lastName;
+    }
+
+    .type {
+      grid-area: type;
+      div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        input {
+          margin: 0rem;
+          padding: 0rem;
+        }
+
+        label {
+          margin: 0rem 4rem 0rem 0.7rem;
+          padding: 0rem;
+        }
+      }
+    }
+
+    .adress {
+      grid-area: adress;
+    }
+
+    .date {
+      grid-area: date;
+    }
+
+    .time {
+      grid-area: time;
+    }
+
+    .info {
+      grid-area: info;
+      textarea {
+        height: 15rem;
+      }
+    }
+
+    .submit {
+      grid-area: submit;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      button {
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        border: solid white;
+        color: $primaryTextColor;
+        background-color: #0e6ffd;
+        width: fit-content;
+        height: fit-content;
+        line-height: 1.5;
+        letter-spacing: 0.1rem;
+        font-family: Arial, Helvetica, sans-serif;
+
+        &:hover {
+          background-color: #0064cf;
+        }
+
+        &:active {
+          background-color: #004da0;
+        }
+      }
+    }
+  }
+}
+
+.gigList {
+  ul {
+    li {
+      line-height: 1.5;
+      letter-spacing: 0.1rem;
+      margin: 2rem 1rem;
+      border-bottom: 1px solid white;
+      div {
+        margin: 1rem 0rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        svg {
+          margin-right: 1rem;
+        }
+      }
+    }
+    #noGigs {
+      border-bottom: none;
+    }
+  }
+}
+
+footer {
+  padding: 1rem;
+  background-color: black;
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        border-radius: 0.2rem;
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+        &:active {
+          color: black;
+          background-color: white;
+        }
+
+        p {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@import "./mediaQueries";
