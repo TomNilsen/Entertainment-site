@@ -3,6 +3,8 @@
 @import "./general";
 @import "./animation";
 
+//Header
+
 header {
   display: flex;
   flex-direction: row;
@@ -24,6 +26,8 @@ header {
       clip-path: circle(45% at 50% 50%);
     }
   }
+
+  //Nav
 
   nav {
     display: flex;
@@ -50,6 +54,8 @@ header {
   }
 }
 
+//Main
+
 main {
   background-color: $customBlack;
   display: flex;
@@ -66,6 +72,8 @@ main {
     width: 20%;
   }
 }
+
+//Home page
 
 .home {
   display: flex;
@@ -86,7 +94,7 @@ main {
     a {
       padding: 0.5rem;
       border-radius: 0.2rem;
-      border: solid white;
+      //border: solid white;
       background-color: #0e6ffd;
 
       &:hover {
@@ -111,6 +119,8 @@ main {
     display: none;
   }
 }
+
+//Movie page
 
 .movies {
   div {
@@ -138,6 +148,8 @@ main {
   }
 }
 
+//Arcive page
+
 .arcive {
   blockquote {
     margin: 3rem 0rem 3rem 0rem;
@@ -162,6 +174,8 @@ main {
   }
 }
 
+//Lecture page
+
 .lectures {
   article {
     margin: 2rem 0rem 2rem 0rem;
@@ -170,10 +184,10 @@ main {
     div {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       img {
         object-fit: contain;
         width: 25%;
+        margin-right: 2rem;
       }
 
       ul {
@@ -187,6 +201,8 @@ main {
     }
   }
 }
+
+//Booking page
 
 .book {
   form {
@@ -281,7 +297,8 @@ main {
       button {
         padding: 0.5rem;
         border-radius: 0.2rem;
-        border: solid white;
+        //border: solid white;
+        border: none;
         color: $primaryTextColor;
         background-color: #0e6ffd;
         width: fit-content;
@@ -301,6 +318,8 @@ main {
     }
   }
 }
+
+//Show list
 
 .gigList {
   ul {
@@ -324,6 +343,8 @@ main {
     }
   }
 }
+
+//Footer
 
 footer {
   padding: 1rem;

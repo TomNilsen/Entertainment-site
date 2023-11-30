@@ -62,7 +62,7 @@ function Book() {
               <textarea name="Info" id="info" required />
             </div>
             <div class="submit">
-              <button type="submit" aria-label="Skicka">
+              <button type="submit" aria-label="Skicka" disabled>
                 Skicka
               </button>
             </div>
