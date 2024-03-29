@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PageLoad from "../components/PageLoad";
 import mainIMG from "../images/Lasse_in_the_sky.jpg";
 import SideBar from "../components/SideBar";
@@ -25,7 +25,7 @@ function Home() {
 
         <div>
           <img src={mainIMG} alt={ALT} />
-          <Link to="book" aria-label="Bokning">Bokning</Link>
+          <NavLink to="boka" aria-label="Bokning">Bokning</NavLink>
         </div>
 
         <article>

@@ -1,21 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
     <nav>
-      <Link to="/" aria-label="Hem">
+      <NavLink to="/" aria-label="Hem">
         Hem
-      </Link>
-      <Link to="/movies" aria-label="Filmer">
+      </NavLink>
+      <NavLink to="/filmer" aria-label="Filmer">
         Filmer
-      </Link>
-      <Link to="/arcive" aria-label="Arkiv">
+      </NavLink>
+      <NavLink to="/arkiv" aria-label="Arkiv">
         Arkiv
-      </Link>
-      <Link to="/lectures" aria-label="Föreläsningar">
+      </NavLink>
+      <NavLink to="/forelasningar" aria-label="Föreläsningar">
         Föreläsningar
-      </Link>
+      </NavLink>
     </nav>
   );
 }

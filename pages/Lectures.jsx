@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PageLoad from "../components/PageLoad";
 import IMG2 from "../images/Lasse_Nilsen.jpg";
-import { ALT, H2, H3, P4 } from "../data/data";
+import { ALT, H2, P4 } from "../data/data";
 import { SheetID, LectureSheet, SheetRange } from "../data/APIauth";
 
 function Lectures() {
@@ -43,7 +43,7 @@ function Lectures() {
         </article>
 
         <article className="imgContainer">
-          <h3>{H3}</h3>
+        
 
           <div>
             <img src={IMG2} alt={ALT} />

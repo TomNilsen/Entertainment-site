@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { List, X } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function PopUpMain() {
   const [menu, setMenu] = useState("");
@@ -23,18 +23,22 @@ function PopUpMain() {
         <button onClick={closeMenu} aria-label="Stäng meny">
           <X />
         </button>
-        <Link to="/" onClick={closeMenu} aria-label="Hem">
+        <NavLink to="/" onClick={closeMenu} aria-label="Hem">
           Hem
-        </Link>
-        <Link to="/movies" onClick={closeMenu} aria-label="Filmer">
+        </NavLink>
+        <NavLink to="/filmer" onClick={closeMenu} aria-label="Filmer">
           Filmer
-        </Link>
-        <Link to="/arcive" onClick={closeMenu} aria-label="Arkiv">
+        </NavLink>
+        <NavLink to="/arkiv" onClick={closeMenu} aria-label="Arkiv">
           Arkiv
-        </Link>
-        <Link to="/lectures" onClick={closeMenu} aria-label="Föreläsningar">
+        </NavLink>
+        <NavLink
+          to="/forelasningar"
+          onClick={closeMenu}
+          aria-label="Föreläsningar"
+        >
           Föreläsningar
-        </Link>
+        </NavLink>
       </nav>
     </>
   );
